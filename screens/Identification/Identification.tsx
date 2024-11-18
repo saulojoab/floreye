@@ -13,10 +13,14 @@ import {
   StyledLinearGradient,
 } from "./Identification.style";
 import IconButton from "@/components/IconButton/IconButton";
-import { useNavigation } from "expo-router";
+import { useLocalSearchParams, useNavigation, useRouter } from "expo-router";
+import { IPredictionResult } from "../Picture/Picture.type";
 
 export default function Identification() {
+  const { plants: plantsString } = useLocalSearchParams();
   const { navigate } = useNavigation();
+
+  console.log(plantsString);
 
   return (
     <Container>

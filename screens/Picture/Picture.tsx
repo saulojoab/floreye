@@ -23,6 +23,7 @@ export default function PictureScreen() {
     toggleFlash,
     loading,
     processImage,
+    cameraRef,
   } = usePictureService();
 
   const { navigate } = useNavigation();
@@ -37,7 +38,7 @@ export default function PictureScreen() {
 
   return (
     <Container>
-      <Camera facing="back" flash={flash ? "on" : "off"}>
+      <Camera facing="back" flash={flash ? "on" : "off"} ref={cameraRef}>
         {loading ? (
           <LoadingContainer />
         ) : (
