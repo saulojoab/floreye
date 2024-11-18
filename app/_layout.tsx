@@ -49,6 +49,13 @@ export default function RootLayout() {
             contentStyle: { marginTop: Constants.statusBarHeight },
           }}
         />
+        <Stack.Screen
+          name="identification"
+          options={{
+            headerShown: false,
+            contentStyle: { marginTop: Constants.statusBarHeight },
+          }}
+        />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
