@@ -11,9 +11,12 @@ import RecentPlants from "./RecentPlants/RecentPlants";
 import IconButton from "@/components/IconButton/IconButton";
 import { useState } from "react";
 import React from "react";
+import { useNavigation } from "expo-router";
 
 export default function MainScreen() {
   const [isSearching, setIsSearching] = useState(false);
+
+  const { navigate } = useNavigation();
 
   return (
     <Container>
@@ -38,7 +41,10 @@ export default function MainScreen() {
               <InformationNumber>10</InformationNumber>
             </Information>
           </InformationContainer>
-          <IconButton onPress={() => {}} name="camera" />
+          <IconButton
+            onPress={() => navigate("camera" as never)}
+            name="camera"
+          />
         </>
       )}
     </Container>
