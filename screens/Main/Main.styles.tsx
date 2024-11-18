@@ -31,3 +31,16 @@ export const InformationNumber = styled.Text`
   color: white;
   margin-top: -3px;
 `;
+
+export const GuideContainer = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const GuideText = styled.Text`
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+`;
